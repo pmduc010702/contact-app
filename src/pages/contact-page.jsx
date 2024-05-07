@@ -1,0 +1,23 @@
+import { Link, NavLink, Outlet } from 'react-router-dom';
+import MainLayout from './../layout/main-layout';
+import { FaUsers,FaUserPlus } from "react-icons/fa6";
+
+
+export default function ContactPage() {
+    return (
+        <MainLayout>
+            <ul className="nav nav-tabs">
+                <li className="nav-item">
+                    <NavLink className="nav-link" to={'/list'}><FaUsers /> All Contact</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to={'/create'}><FaUserPlus /> Create Contact</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink className="nav-link" to={'/details'}>Contact Details</NavLink>
+                </li>
+            </ul>
+            <Outlet /> 
+        </MainLayout>
+    )
+}
