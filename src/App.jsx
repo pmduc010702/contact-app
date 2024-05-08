@@ -1,7 +1,7 @@
 import './App.css'
+import ContactDetail from './components/contacts/contact-detail'
 import ContactList from './components/contacts/contact-list'
 import CreateContact from './components/contacts/create-contact'
-import Loading from './components/loading'
 import ContactPage from './pages/contact-page'
 import { Route, Routes } from 'react-router-dom'
 
@@ -13,6 +13,7 @@ function App() {
         <Route path='/' element={<ContactPage />}>
           <Route path='/list' element={<ContactList />} />
           <Route path='/create' element={<CreateContact />} />
+          <Route path='/detail/:contactId' element={<ContactDetail />} />
         </Route>
       </Routes>
     </>
